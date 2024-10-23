@@ -21,6 +21,13 @@ local plugins = {
 	{
     	'nvim-lualine/lualine.nvim',
     	dependencies = { 'nvim-tree/nvim-web-devicons' }
+	},
+	{
+		'windwp/nvim-autopairs',
+		event = "InsertEnter",
+		config = true
+		-- use opts = {} for passing setup options
+		-- this is equivalent to setup({}) function
 	}
 }
 
