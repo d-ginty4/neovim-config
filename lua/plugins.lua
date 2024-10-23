@@ -17,7 +17,11 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-	{"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"}
+	{"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
+	{
+    	'nvim-lualine/lualine.nvim',
+    	dependencies = { 'nvim-tree/nvim-web-devicons' }
+	}
 }
 
 local opts = {}
@@ -26,9 +30,13 @@ require("lazy").setup(plugins, opts)
 
 local configs = require("nvim-treesitter.configs")
 configs.setup({
-	ensure_installed = { "lua", "vim", "javascript", "typescript", "html", "css", "go", "java" },
+	ensure_installed = { "lua", "vim", "javascript", "typescript", "html", "css", "go", "java", 'bash' },
         highlight = { enable = true },
         indent = { enable = true },  
 })
 
 vim.cmd.colorscheme "catppuccin"
+
+require('lualine').setup({
+	options = { theme = 'dracula' }
+})
