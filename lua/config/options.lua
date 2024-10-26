@@ -9,3 +9,6 @@ vim.cmd('set autoindent')
 vim.cmd('set smartindent')
 
 vim.opt.scrolloff = 5
+vim.cmd('set nowrap')
+vim.o.wildmenu = true
+vim.o.wildmode = 'longest:full,full'  -- Set completion mode
