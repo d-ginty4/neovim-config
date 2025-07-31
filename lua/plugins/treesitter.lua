@@ -53,7 +53,7 @@ vim.api.nvim_create_user_command("TSCheckParsers", function()
 end, {})
 
 return {
-	"nvim-treesitter/nvim-treesitter", 
+	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
 	main = 'nvim-treesitter.configs',
 	opts = {
