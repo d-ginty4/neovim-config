@@ -10,5 +10,12 @@ return {
   lazy = false, -- neo-tree will lazily load itself
   ---@module "neo-tree"
   ---@type neotree.Config?
-  opts = {},
+  opts = {
+		window = {
+			position = "float"
+		},
+		filesystem = {
+		  	hijack_netrw_behavior = "open_default",
+		},
+	}
 }
