@@ -2,9 +2,7 @@
 local wk = require("which-key")
 
 --Standalone mappings
-wk.add({
-	{"<leader>w", "<cmd>w<cr>", desc="Save File"}
-})
+wk.add({})
 
 --the following are groups of mappings
 local fileTreeMappings = require("config.mappings.fileTree")
@@ -19,10 +17,19 @@ wk.add({
 	windowMappings
 })
 
+local buffersMappings = require("config.mappings.buffers")
 wk.add({
     {"<leader>b", desc="Buffer Commands"},
+	buffersMappings
 })
 
 wk.add({
     {"<leader>r", desc="Register Commands"},
 })
+
+local gitMappings = require("config.mappings.git")
+wk.add({
+    {"<leader>g", desc="Git Commands"},
+	gitMappings
+})
+

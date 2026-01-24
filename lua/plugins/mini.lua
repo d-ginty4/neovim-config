@@ -5,5 +5,6 @@ return {
 		require('mini.icons').setup({})
 		require('mini.pairs').setup({}) -- automatically add pairs or (, {, etc
 		require('mini.git').setup({})
+		require('mini.snippets').setup({})
 	end
 }
