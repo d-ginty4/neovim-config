@@ -2,12 +2,13 @@
 local wk = require("which-key")
 
 --Standalone mappings
+require("config.mappings.mappings")
 wk.add({})
 
 --the following are groups of mappings
 local fileTreeMappings = require("config.mappings.fileTree")
 wk.add({
-    {"<leader>f", desc="File Tree Commands"},
+    {"<leader>f", desc="File Commands"},
 	fileTreeMappings
 })
 
