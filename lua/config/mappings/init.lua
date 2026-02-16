@@ -6,26 +6,32 @@ require("config.mappings.mappings")
 --the following are groups of mappings
 local fileTreeMappings = require("config.mappings.fileTree")
 wk.add({
-    {"<leader>f", desc="File Commands"},
+	{ "<leader>f", desc = "File Commands" },
 	fileTreeMappings
 })
 
 local windowMappings = require("config.mappings.windows")
 wk.add({
-    {"<leader>w", desc="Window Commands"},
+	{ "<leader>w", desc = "Window Commands" },
 	windowMappings
 })
 
 local buffersMappings = require("config.mappings.buffers")
 wk.add({
-    {"<leader>b", desc="Buffer Commands"},
+	{ "<leader>b", desc = "Buffer Commands" },
 	buffersMappings
 })
 
 local gitMappings = require("config.mappings.git")
 wk.add({
-    {"<leader>g", desc="Git Commands"},
+	{ "<leader>g", desc = "Git Commands" },
 	gitMappings
+})
+
+local searchMappings = require("config.mappings.search")
+wk.add({
+	{ "<leader>s", desc = "Search Commands" },
+	searchMappings
 })
 
 local terminalMappings = require("config.mappings.terminal")
